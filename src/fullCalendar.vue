@@ -193,7 +193,8 @@
           thisDayEvents[i].isShow = true;
           // console.log('eventType')
           if(eventTypes.filter((v) => (v == thisDayEvents[i].eventType)).length > 2 && thisDayEvents[i].cellIndex > 2 ){
-            thisDayEvents[i].cssClass = 'is-opacity extra'
+            thisDayEvents[i].isShow = false
+            thisDayEvents[i].isExtra = true
           }
           if (thisDayEvents[i].cellIndex == i+1 || i>2) continue;
           thisDayEvents.splice(i,0,{

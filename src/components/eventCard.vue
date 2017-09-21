@@ -34,6 +34,10 @@
                     cssClasses.push('is-opacity');
                 }
 
+                if (this.event.isExtra) {
+                    cssClasses.push('extra')
+                }
+
                 return cssClasses.join(' ');
             },
             showTitle() {
