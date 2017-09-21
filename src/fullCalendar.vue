@@ -116,7 +116,7 @@
       return {
         currentMonth : moment().startOf('month'),
         isLismit : true,
-        eventLimit : 3,
+        eventLimit : 0,
         showMore : false,
         morePos : {
           top: 0,
@@ -240,7 +240,7 @@
       }
     }
   }
-  
+
 </script>
 <style lang="scss">
   .comp-full-calendar{
