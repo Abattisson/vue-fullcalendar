@@ -648,20 +648,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }).length > 2 && thisDayEvents[i].cellIndex > 2) {
 	          thisDayEvents[i].isExtra = true;
 	        }
-	        if (thisDayEvents[i].cellIndex == i + 1 || i > 2) return 'continue';
-	        thisDayEvents.splice(i, 0, {
-	          title: 'holder',
-	          cellIndex: i + 1,
-	          start: date.format(),
-	          end: date.format(),
-	          isShow: true
-	        });
+	        // if (thisDayEvents[i].cellIndex == i+1 || i>2) continue;
+	        // thisDayEvents.splice(i,0,{
+	        //   title : 'holder',
+	        //   cellIndex : i+1,
+	        //   start : date.format(),
+	        //   end : date.format(),
+	        //   isShow : true
+	        // })
 	      };
 	
 	      for (var i = 0; i < thisDayEvents.length; i++) {
-	        var _ret = _loop(i);
-	
-	        if (_ret === 'continue') continue;
+	        _loop(i);
 	      }
 	      console.log(thisDayEvents);
 	      return thisDayEvents;
