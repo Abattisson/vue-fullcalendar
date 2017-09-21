@@ -54,8 +54,7 @@
         </div>
 
         <!-- full events when click show more -->
-        <div class="more-events" v-show="showMore"
-             :style="{left: morePos.left + 'px', top: morePos.top + 'px'}">
+        <div class="more-events" v-show="showMore">
           <div class="more-header">
             <span class="title">{{ moreTitle(selectDay.date) }}</span>
             <span class="close" @click.stop="showMore = false">x</span>
@@ -194,16 +193,15 @@
           if(eventTypes.filter((v) => (v == thisDayEvents[i].eventType)).length > 2 && thisDayEvents[i].cellIndex > 2 ){
             thisDayEvents[i].isExtra = true
           }
-          // if (thisDayEvents[i].cellIndex == i+1 || i>2) continue;
-          // thisDayEvents.splice(i,0,{
-          //   title : 'holder',
-          //   cellIndex : i+1,
-          //   start : date.format(),
-          //   end : date.format(),
-          //   isShow : true
-          // })
+          if (thisDayEvents[i].cellIndex == i+1 || i>2) continue;
+          thisDayEvents.splice(i,0,{
+            title : 'holder',
+            cellIndex : i+1,
+            start : date.format(),
+            end : date.format(),
+            isShow : false
+          })
         }
-        console.log(thisDayEvents)
         return thisDayEvents
       },
       selectThisDay (day, jsEvent) {
