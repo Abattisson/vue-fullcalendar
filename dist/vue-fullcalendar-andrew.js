@@ -17610,8 +17610,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          directives: [{
 	            name: "show",
 	            rawName: "v-show",
-	            value: (event.cellIndex <= _vm.eventLimit),
-	            expression: "event.cellIndex <= eventLimit"
+	            value: (event.cellIndex > _vm.eventLimit),
+	            expression: "event.cellIndex > eventLimit"
 	          }],
 	          attrs: {
 	            "event": event,
