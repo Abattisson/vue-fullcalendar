@@ -643,11 +643,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _loop = function _loop(i) {
 	        thisDayEvents[i].cellIndex = thisDayEvents[i].cellIndex || i + 1;
 	        thisDayEvents[i].isShow = true;
-	        // console.log('eventType')
 	        if (eventTypes.filter(function (v) {
 	          return v == thisDayEvents[i].eventType;
 	        }).length > 2 && thisDayEvents[i].cellIndex > 2) {
-	          thisDayEvents[i].isShow = false;
 	          thisDayEvents[i].isExtra = true;
 	        }
 	        if (thisDayEvents[i].cellIndex == i + 1 || i > 2) return 'continue';
@@ -656,7 +654,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          cellIndex: i + 1,
 	          start: date.format(),
 	          end: date.format(),
-	          isShow: false
+	          isShow: true
 	        });
 	      };
 	
@@ -665,6 +663,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        if (_ret === 'continue') continue;
 	      }
+	      console.log(thisDayEvents);
 	      return thisDayEvents;
 	    },
 	    selectThisDay: function selectThisDay(day, jsEvent) {
@@ -17630,7 +17629,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	            value: (event.cellIndex > _vm.eventLimit),
 	            expression: "event.cellIndex > eventLimit"
 	          }],
-	          key: event.title,
 	          attrs: {
 	            "event": event,
 	            "date": day.date,

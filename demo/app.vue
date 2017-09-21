@@ -32,6 +32,34 @@ let demoEvents = [
       eventType: 'ski'
     },
     {
+      title    : 'one',
+      start    : '2017-09-25',
+      end      : '2017-09-27',
+      cssClass : 'family',
+      eventType: 'ski'
+    },
+    {
+      title    : 'two',
+      start    : '2017-09-25',
+      end      : '2017-09-27',
+      cssClass : 'family',
+      eventType: 'ski'
+    },
+    {
+      title    : 'one',
+      start    : '2017-09-25',
+      end      : '2017-09-27',
+      cssClass : 'family',
+      eventType: 'ski'
+    },
+    {
+      title    : 'two',
+      start    : '2017-09-25',
+      end      : '2017-09-27',
+      cssClass : 'family',
+      eventType: 'ski'
+    },
+    {
       title    : 'threee',
       start    : '2017-09-25',
       end      : '2017-09-27',
