@@ -17,7 +17,7 @@ devConfig.module.loaders.push(stripLoader);
 devConfig.entry = './src/index.js'
 devConfig.output = {
   path:'./dist',
-  filename:'vue-fullcalendar.js',
+  filename:'vue-fullcalendar-andrew.js',
   library:'VueFullcalendar',
   libraryTarget: 'umd'
 }

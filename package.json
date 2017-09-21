@@ -4,10 +4,10 @@
   "author": "Sunny Wang",
   "license": "MIT",
   "description": "pure vue-based fullcalendar, no jquery moment required",
-  "main": "dist/vue-fullcalendar.js",
+  "main": "dist/vue-fullcalendar-andrew.js",
   "files": [
-    "dist/vue-fullcalendar.js",
-    "dist/vue-fullcalendar.min.js",
+    "dist/vue-fullcalendar-andrew.js",
+    "dist/vue-fullcalendar-andrew.min.js",
     "src"
   ],
   "scripts": {
