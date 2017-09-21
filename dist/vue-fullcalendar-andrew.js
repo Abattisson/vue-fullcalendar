@@ -647,7 +647,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (eventTypes.filter(function (v) {
 	          return v == thisDayEvents[i].eventType;
 	        }).length > 2 && thisDayEvents[i].cellIndex > 2) {
-	          thisDayEvents[i].cssClass = 'is-opacity';
+	          thisDayEvents[i].isShow = false;
+	          thisDayEvents[i].isExtra = true;
 	        }
 	        if (thisDayEvents[i].cellIndex == i + 1 || i > 2) return 'continue';
 	        thisDayEvents.splice(i, 0, {
@@ -16713,6 +16714,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	            if (!this.event.isShow) {
 	                cssClasses.push('is-opacity');
+	            }
+	
+	            if (this.event.isExtra) {
+	                cssClasses.push('extra');
 	            }
 	
 	            return cssClasses.join(' ');
