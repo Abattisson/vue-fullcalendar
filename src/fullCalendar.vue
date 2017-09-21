@@ -40,7 +40,7 @@
               'not-cur-month' : !day.isCurMonth}" @click.stop="dayClick(day.date, $event)">
               <p class="day-number">{{day.monthDay}}</p>
               <div class="event-box">
-                <event-card :event="event" :date="day.date" :firstDay="firstDay" v-for="event in day.events" v-show="event.cellIndex > eventLimit" @click="eventClick">
+                <event-card :event="event" :date="day.date" :firstDay="firstDay" v-for="event in day.events" :key="event.title" v-show="event.cellIndex > eventLimit" @click="eventClick">
                   <template scope="p">
                     <slot name="fc-event-card" :event="p.event"></slot>
                   </template>
@@ -172,10 +172,11 @@
 
         // find all events start from this date
         let cellIndexArr = [];
+        let eventTypes = []
         let thisDayEvents = this.events.filter(day => {
           let st = moment(day.start);
           let ed = moment(day.end ? day.end : st);
-
+        eventTypes.push(day.eventType)
           return date.isBetween(st, ed, null, '[]');
         });
 
@@ -190,6 +191,10 @@
         for (let i = 0;i < thisDayEvents.length;i++) {
           thisDayEvents[i].cellIndex = thisDayEvents[i].cellIndex || (i + 1);
           thisDayEvents[i].isShow = true;
+          // console.log('eventType')
+          if(eventTypes.filter((v) => (v == thisDayEvents[i].eventType)).length > 2 && thisDayEvents[i].cellIndex > 2 ){
+            thisDayEvents[i].cssClass = 'is-opacity extra'
+          }
           if (thisDayEvents[i].cellIndex == i+1 || i>2) continue;
           thisDayEvents.splice(i,0,{
             title : 'holder',
@@ -199,7 +204,6 @@
             isShow : false
           })
         }
-
         return thisDayEvents
       },
       selectThisDay (day, jsEvent) {

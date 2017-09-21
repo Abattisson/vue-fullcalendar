@@ -623,10 +623,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	      // find all events start from this date
 	      var cellIndexArr = [];
+	      var eventTypes = [];
 	      var thisDayEvents = this.events.filter(function (day) {
 	        var st = (0, _moment2.default)(day.start);
 	        var ed = (0, _moment2.default)(day.end ? day.end : st);
-	
+	        eventTypes.push(day.eventType);
 	        return date.isBetween(st, ed, null, '[]');
 	      });
 	
@@ -638,10 +639,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	
 	      // mark cellIndex and place holder
-	      for (var i = 0; i < thisDayEvents.length; i++) {
+	
+	      var _loop = function _loop(i) {
 	        thisDayEvents[i].cellIndex = thisDayEvents[i].cellIndex || i + 1;
 	        thisDayEvents[i].isShow = true;
-	        if (thisDayEvents[i].cellIndex == i + 1 || i > 2) continue;
+	        // console.log('eventType')
+	        if (eventTypes.filter(function (v) {
+	          return v == thisDayEvents[i].eventType;
+	        }).length > 2 && thisDayEvents[i].cellIndex > 2) {
+	          thisDayEvents[i].cssClass = 'is-opacity';
+	        }
+	        if (thisDayEvents[i].cellIndex == i + 1 || i > 2) return 'continue';
 	        thisDayEvents.splice(i, 0, {
 	          title: 'holder',
 	          cellIndex: i + 1,
@@ -649,8 +657,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	          end: date.format(),
 	          isShow: false
 	        });
-	      }
+	      };
 	
+	      for (var i = 0; i < thisDayEvents.length; i++) {
+	        var _ret = _loop(i);
+	
+	        if (_ret === 'continue') continue;
+	      }
 	      return thisDayEvents;
 	    },
 	    selectThisDay: function selectThisDay(day, jsEvent) {
@@ -17612,6 +17625,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            value: (event.cellIndex > _vm.eventLimit),
 	            expression: "event.cellIndex > eventLimit"
 	          }],
+	          key: event.title,
 	          attrs: {
 	            "event": event,
 	            "date": day.date,
