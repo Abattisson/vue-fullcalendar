@@ -17644,7 +17644,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	          }])
 	        })
-	      }), _vm._v(" "), (day.events.length > _vm.eventLimit) ? _c('p', {
+	      }), _vm._v(" "), _c('p', {
 	        staticClass: "more-link",
 	        on: {
 	          "click": function($event) {
@@ -17652,7 +17652,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _vm.selectThisDay(day, $event)
 	          }
 	        }
-	      }) : _vm._e()], 2)])
+	      })], 2)])
 	    }))
 	  })), _vm._v(" "), _c('div', {
 	    directives: [{
