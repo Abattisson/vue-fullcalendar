@@ -781,7 +781,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 	//
-	//
 	
 	// import langSets from './dataMap/langSets'
 
@@ -17656,7 +17655,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _vm.selectThisDay(day, $event)
 	          }
 	        }
-	      }, [_vm._v("\n                 " + _vm._s(day.date) + "\n              ")])], 2)])
+	      })], 2)])
 	    }))
 	  })), _vm._v(" "), _c('div', {
 	    directives: [{

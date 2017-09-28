@@ -47,7 +47,6 @@
                 </event-card>
                 <p
                    class="more-link" :id="day.date|dateFormat" @click.stop="selectThisDay(day, $event)">
-                   {{ day.date }}
                 </p>
               </div>
             </div>
