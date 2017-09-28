@@ -46,7 +46,7 @@
                   </template>
                 </event-card>
                 <p
-                   class="more-link" :id="formatDate(day.date)" @click.stop="selectThisDay(day, $event)">
+                   class="more-link" ref="formatDate(day.date)" :id="formatDate(day.date)" @click.stop="selectThisDay(day, $event)">
                 </p>
               </div>
             </div>

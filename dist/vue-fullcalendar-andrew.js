@@ -17649,6 +17649,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }])
 	        })
 	      }), _vm._v(" "), _c('p', {
+	        ref: "formatDate(day.date)",
+	        refInFor: true,
 	        staticClass: "more-link",
 	        attrs: {
 	          "id": _vm.formatDate(day.date)
