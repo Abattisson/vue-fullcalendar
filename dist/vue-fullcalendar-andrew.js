@@ -781,6 +781,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 	//
+	//
 	
 	// import langSets from './dataMap/langSets'
 
@@ -17646,13 +17647,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	        })
 	      }), _vm._v(" "), _c('p', {
 	        staticClass: "more-link",
+	        attrs: {
+	          "id": _vm._f("dateFormat")(day.date)
+	        },
 	        on: {
 	          "click": function($event) {
 	            $event.stopPropagation();
 	            _vm.selectThisDay(day, $event)
 	          }
 	        }
-	      })], 2)])
+	      }, [_vm._v("\n                 " + _vm._s(day.date) + "\n              ")])], 2)])
 	    }))
 	  })), _vm._v(" "), _c('div', {
 	    directives: [{
