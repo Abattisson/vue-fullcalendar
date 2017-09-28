@@ -46,7 +46,7 @@
                   </template>
                 </event-card>
                 <p
-                   class="more-link" :id="day.date|dateFormat" @click.stop="selectThisDay(day, $event)">
+                   class="more-link" :id="formatDate(day.date)" @click.stop="selectThisDay(day, $event)">
                 </p>
               </div>
             </div>
@@ -129,6 +129,10 @@
       }
     },
     methods : {
+      formatDate (value) {
+        let formattedDate = moment(value).format('YYYY-MM-DD')
+        return formattedDate
+      },
       emitChangeMonth (firstDayOfMonth) {
         this.currentMonth = firstDayOfMonth;
 

@@ -581,6 +581,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  methods: {
+	    formatDate: function formatDate(value) {
+	      var formattedDate = (0, _moment2.default)(value).format('YYYY-MM-DD');
+	      return formattedDate;
+	    },
 	    emitChangeMonth: function emitChangeMonth(firstDayOfMonth) {
 	      this.currentMonth = firstDayOfMonth;
 	
@@ -17647,7 +17651,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }), _vm._v(" "), _c('p', {
 	        staticClass: "more-link",
 	        attrs: {
-	          "id": _vm._f("dateFormat")(day.date)
+	          "id": _vm.formatDate(day.date)
 	        },
 	        on: {
 	          "click": function($event) {
