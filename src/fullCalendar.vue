@@ -206,7 +206,6 @@
             isShow : false
           })
         }
-        console.log(this.$refs)
         return thisDayEvents
       },
       selectThisDay (day, jsEvent) {

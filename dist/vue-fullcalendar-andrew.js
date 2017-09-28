@@ -17649,11 +17649,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }])
 	        })
 	      }), _vm._v(" "), _c('p', {
-	        ref: "_uid",
+	        ref: "id",
 	        refInFor: true,
 	        staticClass: "more-link",
 	        attrs: {
-	          "id": _vm._uid
+	          "id": _vm.formatDate(day.date)
 	        },
 	        on: {
 	          "click": function($event) {
