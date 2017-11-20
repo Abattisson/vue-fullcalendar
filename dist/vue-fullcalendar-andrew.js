@@ -556,7 +556,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    openDays: {
 	      type: Array,
 	      default: function _default() {
-	        return [1, 2, 3, 4, 5, 6, 7];
+	        return [0, 1, 2, 3, 4, 5, 6, 7];
 	      }
 	    }
 	  },
@@ -611,7 +611,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      for (var perWeek = 0; perWeek < 6; perWeek++) {
 	        var week = [];
 	
-	        for (var perDay = 0; perDay < 7; perDay++) {
+	        for (var perDay = 1; perDay <= 7; perDay++) {
 	          week.push({
 	            monthDay: monthViewStartDate.date(),
 	            isToday: monthViewStartDate.isSame((0, _moment2.default)(), 'day'),

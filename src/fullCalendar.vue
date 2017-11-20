@@ -104,7 +104,7 @@
       },
       openDays: {
         type: Array,
-        default: () => [1,2,3,4,5,6,7]
+        default: () => [0,1,2,3,4,5,6,7]
       }
     },
     components : {
@@ -157,7 +157,7 @@
         for(let perWeek = 0 ; perWeek < 6 ; perWeek++) {
           let week = [];
 
-          for(let perDay = 0 ; perDay < 7 ; perDay++) {
+          for(let perDay = 1 ; perDay <= 7 ; perDay++) {
             week.push({
               monthDay : monthViewStartDate.date(),
               isToday : monthViewStartDate.isSame(moment(), 'day'),
