@@ -89,7 +89,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/Abattisson/Code/Valet/vue-fullcalendar-andrew/src/fullCalendar.vue"
+	Component.options.__file = "/Users/AB/Code/vue-fullcalendar-andrew/src/fullCalendar.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] fullCalendar.vue: functional components are not supported with templates, they should use render functions.")}
 	
@@ -552,6 +552,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      },
 	
 	      default: 0
+	    },
+	    openDays: {
+	      type: Array,
+	      default: function _default() {
+	        return [1, 2, 3, 4, 5, 6, 7];
+	      }
 	    }
 	  },
 	  components: {
@@ -612,7 +618,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            isCurMonth: monthViewStartDate.isSame(this.currentMonth, 'month'),
 	            weekDay: perDay,
 	            date: (0, _moment2.default)(monthViewStartDate),
-	            events: this.slotEvents(monthViewStartDate)
+	            events: this.slotEvents(monthViewStartDate),
+	            isClosed: this.checkIfClosed(perDay)
 	          });
 	
 	          monthViewStartDate.add(1, 'day');
@@ -622,6 +629,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	
 	      return calendar;
+	    },
+	    checkIfClosed: function checkIfClosed(perDay) {
+	      if (this.openDays.includes(perDay)) {
+	        return false;
+	      } else {
+	        return true;
+	      }
 	    },
 	    slotEvents: function slotEvents(date) {
 	
@@ -17042,7 +17056,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/Abattisson/Code/Valet/vue-fullcalendar-andrew/src/components/eventCard.vue"
+	Component.options.__file = "/Users/AB/Code/vue-fullcalendar-andrew/src/components/eventCard.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] eventCard.vue: functional components are not supported with templates, they should use render functions.")}
 	
@@ -17762,7 +17776,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/Abattisson/Code/Valet/vue-fullcalendar-andrew/src/components/header.vue"
+	Component.options.__file = "/Users/AB/Code/vue-fullcalendar-andrew/src/components/header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 	
@@ -17981,7 +17995,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        staticClass: "day-cell",
 	        class: {
 	          'today': day.isToday,
-	            'not-cur-month': !day.isCurMonth
+	            'not-cur-month': !day.isCurMonth, 'isClosed': day.isClosed
 	        }
 	      }, [_c('p', {
 	        staticClass: "day-number"

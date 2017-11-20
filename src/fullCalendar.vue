@@ -26,7 +26,7 @@
           <div class="week-row" v-for="week in currentDates">
             <div class="day-cell" v-for="day in week"
                  :class="{'today' : day.isToday,
-              'not-cur-month' : !day.isCurMonth}">
+              'not-cur-month' : !day.isCurMonth, 'isClosed' : day.isClosed}">
               <p class="day-number">{{ day.monthDay }}</p>
             </div>
           </div>
@@ -101,6 +101,10 @@
           return res >= 0 && res <= 6
         },
         default : 0
+      },
+      openDays: {
+        type: Array,
+        default: () => [1,2,3,4,5,6,7]
       }
     },
     components : {
@@ -160,7 +164,8 @@
               isCurMonth : monthViewStartDate.isSame(this.currentMonth, 'month'),
               weekDay : perDay,
               date : moment(monthViewStartDate),
-              events : this.slotEvents(monthViewStartDate)
+              events : this.slotEvents(monthViewStartDate),
+              isClosed : this.checkIfClosed(perDay)
             });
 
             monthViewStartDate.add(1, 'day');
@@ -170,6 +175,13 @@
         }
 
         return calendar
+      },
+      checkIfClosed (perDay) {
+        if (this.openDays.includes(perDay)) {
+            return false
+        } else {
+            return true
+        }
       },
       slotEvents (date) {
 
