@@ -17873,6 +17873,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	
 	exports.default = {
 	  props: {
@@ -17884,8 +17892,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  data: function data() {
 	    return {
-	      leftArrow: '<svg class="triangle icon" id="leftArrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n     viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">\n  <path fill-rule="evenodd" clip-rule="evenodd" class="cls-1" d="M108,61.3l-68.4-46c-5.4-3.6-12.7,0.2-12.7,6.7V114\n    c0,6.5,7.3,10.4,12.7,6.7l68.4-46C112.8,71.5,112.8,64.5,108,61.3z"/>\n  </svg>',
-	      rightArrow: '<svg class="triangle icon" id="rightArrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"\n     viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">\n  <path fill-rule="evenodd" clip-rule="evenodd" class="cls-1" d="M108,61.3l-68.4-46c-5.4-3.6-12.7,0.2-12.7,6.7V114\n    c0,6.5,7.3,10.4,12.7,6.7l68.4-46C112.8,71.5,112.8,64.5,108,61.3z"/>\n  </svg>'
+	      leftArrow: '',
+	      rightArrow: ''
 	    };
 	  },
 	
@@ -17926,7 +17934,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.goPrev($event)
 	      }
 	    }
-	  }, [_vm._v(_vm._s(_vm.leftArrow))]), _vm._v(" "), _c('span', {
+	  }, [_c('svg', {
+	    staticClass: "triangle icon",
+	    attrs: {
+	      "id": "rightArrow",
+	      "xmlns": "http://www.w3.org/2000/svg",
+	      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+	      "x": "0px",
+	      "y": "0px",
+	      "viewBox": "0 0 128 128",
+	      "enable-background": "new 0 0 128 128",
+	      "xml:space": "preserve"
+	    }
+	  }, [_c('path', {
+	    staticClass: "cls-1",
+	    attrs: {
+	      "fill-rule": "evenodd",
+	      "clip-rule": "evenodd",
+	      "d": "M108,61.3l-68.4-46c-5.4-3.6-12.7,0.2-12.7,6.7V114\n    c0,6.5,7.3,10.4,12.7,6.7l68.4-46C112.8,71.5,112.8,64.5,108,61.3z"
+	    }
+	  })])]), _vm._v(" "), _c('span', {
 	    staticClass: "title"
 	  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('span', {
 	    staticClass: "next-month",
@@ -17936,7 +17963,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.goNext($event)
 	      }
 	    }
-	  }, [_vm._v(_vm._s(_vm.rightArrow))])]), _vm._v(" "), _c('div', {
+	  }, [_c('svg', {
+	    staticClass: "triangle icon",
+	    attrs: {
+	      "id": "rightArrow",
+	      "xmlns": "http://www.w3.org/2000/svg",
+	      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+	      "x": "0px",
+	      "y": "0px",
+	      "viewBox": "0 0 128 128",
+	      "enable-background": "new 0 0 128 128",
+	      "xml:space": "preserve"
+	    }
+	  }, [_c('path', {
+	    staticClass: "cls-1",
+	    attrs: {
+	      "fill-rule": "evenodd",
+	      "clip-rule": "evenodd",
+	      "d": "M108,61.3l-68.4-46c-5.4-3.6-12.7,0.2-12.7,6.7V114\n    c0,6.5,7.3,10.4,12.7,6.7l68.4-46C112.8,71.5,112.8,64.5,108,61.3z"
+	    }
+	  })])])]), _vm._v(" "), _c('div', {
 	    staticClass: "header-right"
 	  }, [_vm._t("header-right")], 2)])
 	},staticRenderFns: []}
