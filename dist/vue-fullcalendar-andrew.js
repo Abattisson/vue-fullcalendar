@@ -17831,7 +17831,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\n.full-calendar-header {\n  display: flex;\n  align-items: center;\n}\n.full-calendar-header .header-left, .full-calendar-header .header-right {\n    flex: 1;\n}\n.full-calendar-header .header-center {\n    flex: 3;\n    text-align: center;\n}\n.full-calendar-header .header-center .title {\n      margin: 0 10px;\n}\n.full-calendar-header .header-center .prev-month, .full-calendar-header .header-center .next-month {\n      cursor: pointer;\n}\n.full-calendar-header .header-center .triangle {\n      max-height: 12px;\n}\n.full-calendar-header .header-center .prev-month {\n      transform: rotate(180deg);\n}\n.full-calendar-header .header-center .next-month {\n      transform: rotate(0);\n}\n", ""]);
+	exports.push([module.id, "\n.full-calendar-header {\n  display: flex;\n  align-items: center;\n}\n.full-calendar-header .header-left, .full-calendar-header .header-right {\n    flex: 1;\n}\n.full-calendar-header .header-center {\n    flex: 3;\n    text-align: center;\n}\n.full-calendar-header .header-center .title {\n      margin: 0 10px;\n}\n.full-calendar-header .header-center .prev-month, .full-calendar-header .header-center .next-month {\n      cursor: pointer;\n}\n.full-calendar-header .header-center .triangle {\n      max-height: 12px;\n}\n.full-calendar-header .header-center .prev-month .triangle {\n      transform: rotate(180deg);\n}\n.full-calendar-header .header-center .next-month .triangle {\n      transform: rotate(0);\n}\n", ""]);
 	
 	// exports
 
@@ -17937,7 +17937,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, [_c('svg', {
 	    staticClass: "triangle icon",
 	    attrs: {
-	      "id": "rightArrow",
+	      "id": "leftArrow",
 	      "xmlns": "http://www.w3.org/2000/svg",
 	      "xmlns:xlink": "http://www.w3.org/1999/xlink",
 	      "x": "0px",

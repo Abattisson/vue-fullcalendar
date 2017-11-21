@@ -5,7 +5,7 @@
       </slot>
     </div>
     <div class="header-center">
-      <span class="prev-month" @click.stop="goPrev"><svg class="triangle icon" id="rightArrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <span class="prev-month" @click.stop="goPrev"><svg class="triangle icon" id="leftArrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
     <path fill-rule="evenodd" clip-rule="evenodd" class="cls-1" d="M108,61.3l-68.4-46c-5.4-3.6-12.7,0.2-12.7,6.7V114
       c0,6.5,7.3,10.4,12.7,6.7l68.4-46C112.8,71.5,112.8,64.5,108,61.3z"/>
@@ -79,10 +79,14 @@
       max-height: 12px;
     }
     .prev-month{
-      transform: rotate(180deg);
+      .triangle{
+        transform: rotate(180deg);
+      }
     }
     .next-month{
-      transform: rotate(0);
+      .triangle{
+        transform: rotate(0);
+      }
     }
   }
 }
