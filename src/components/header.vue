@@ -74,6 +74,8 @@
     }
     .prev-month,.next-month{
       cursor: pointer;
+    }
+    .triangle{
       max-height: 12px;
     }
     .prev-month{
