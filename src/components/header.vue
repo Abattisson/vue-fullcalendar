@@ -74,9 +74,10 @@
     }
     .prev-month,.next-month{
       cursor: pointer;
+      max-height: 12px;
     }
     .prev-month{
-      transform: rotate(90deg);
+      transform: rotate(180deg);
     }
     .next-month{
       transform: rotate(0);
