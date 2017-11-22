@@ -217,12 +217,15 @@
         });
 
         // mark cellIndex and place holder
+        let newEvents = []
         for (let i = 0;i < thisDayEvents.length;i++) {
           thisDayEvents[i].cellIndex = thisDayEvents[i].cellIndex || (i + 1);
           thisDayEvents[i].isShow = true;
-          if(eventTypes.filter((v) => (v == thisDayEvents[i].eventType)).length > 2){
-            thisDayEvents[i].isExtra = true
+          newEvents.push(thisDayEvents[i].cssClass)
+          if(newEvents.filter(v => (v == thisDayEvents[i].cssClass)).length > 2){
+            thisDayEvents[i].isExtra = true;
           }
+
           if (thisDayEvents[i].cellIndex == i+1 || i>2) continue;
           thisDayEvents.splice(i,0,{
             title : 'holder',

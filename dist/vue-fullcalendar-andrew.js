@@ -671,15 +671,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	
 	      // mark cellIndex and place holder
+	      var newEvents = [];
 	
 	      var _loop = function _loop(i) {
 	        thisDayEvents[i].cellIndex = thisDayEvents[i].cellIndex || i + 1;
 	        thisDayEvents[i].isShow = true;
-	        if (eventTypes.filter(function (v) {
-	          return v == thisDayEvents[i].eventType;
+	        newEvents.push(thisDayEvents[i].cssClass);
+	        if (newEvents.filter(function (v) {
+	          return v == thisDayEvents[i].cssClass;
 	        }).length > 2) {
 	          thisDayEvents[i].isExtra = true;
 	        }
+	
 	        if (thisDayEvents[i].cellIndex == i + 1 || i > 2) return 'continue';
 	        thisDayEvents.splice(i, 0, {
 	          title: 'holder',
