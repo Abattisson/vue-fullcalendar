@@ -89,7 +89,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/AB/Code/vue-fullcalendar-andrew/src/fullCalendar.vue"
+	Component.options.__file = "/Users/Abattisson/Code/Valet/vue-fullcalendar-andrew/src/fullCalendar.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] fullCalendar.vue: functional components are not supported with templates, they should use render functions.")}
 	
@@ -17070,7 +17070,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/AB/Code/vue-fullcalendar-andrew/src/components/eventCard.vue"
+	Component.options.__file = "/Users/Abattisson/Code/Valet/vue-fullcalendar-andrew/src/components/eventCard.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] eventCard.vue: functional components are not supported with templates, they should use render functions.")}
 	
@@ -17790,7 +17790,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "/Users/AB/Code/vue-fullcalendar-andrew/src/components/header.vue"
+	Component.options.__file = "/Users/Abattisson/Code/Valet/vue-fullcalendar-andrew/src/components/header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 	
@@ -17845,7 +17845,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\n.full-calendar-header {\n  display: flex;\n  align-items: center;\n}\n.full-calendar-header .header-left, .full-calendar-header .header-right {\n    flex: 1;\n}\n.full-calendar-header .header-center {\n    flex: 3;\n    text-align: center;\n}\n.full-calendar-header .header-center .title {\n      margin: 0 10px;\n}\n.full-calendar-header .header-center .prev-month, .full-calendar-header .header-center .next-month {\n      cursor: pointer;\n}\n", ""]);
+	exports.push([module.id, "\n.full-calendar-header {\n  display: flex;\n  align-items: center;\n}\n.full-calendar-header .header-left, .full-calendar-header .header-right {\n    flex: 1;\n}\n.full-calendar-header .header-center {\n    flex: 3;\n    text-align: center;\n}\n.full-calendar-header .header-center .title {\n      margin: 0 10px;\n}\n.full-calendar-header .header-center .prev-month, .full-calendar-header .header-center .next-month {\n      cursor: pointer;\n}\n.full-calendar-header .header-center .triangle {\n      max-height: 12px;\n}\n.full-calendar-header .header-center .prev-month .triangle {\n      transform: rotate(180deg);\n}\n.full-calendar-header .header-center .next-month .triangle {\n      transform: rotate(0);\n}\n", ""]);
 	
 	// exports
 
@@ -17887,6 +17887,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	
 	exports.default = {
 	  props: {
@@ -17898,8 +17906,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  data: function data() {
 	    return {
-	      leftArrow: '<',
-	      rightArrow: '>'
+	      leftArrow: '',
+	      rightArrow: ''
 	    };
 	  },
 	
@@ -17940,7 +17948,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.goPrev($event)
 	      }
 	    }
-	  }, [_vm._v(_vm._s(_vm.leftArrow))]), _vm._v(" "), _c('span', {
+	  }, [_c('svg', {
+	    staticClass: "triangle icon",
+	    attrs: {
+	      "id": "leftArrow",
+	      "xmlns": "http://www.w3.org/2000/svg",
+	      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+	      "x": "0px",
+	      "y": "0px",
+	      "viewBox": "0 0 128 128",
+	      "enable-background": "new 0 0 128 128",
+	      "xml:space": "preserve"
+	    }
+	  }, [_c('path', {
+	    staticClass: "cls-1",
+	    attrs: {
+	      "fill-rule": "evenodd",
+	      "clip-rule": "evenodd",
+	      "d": "M108,61.3l-68.4-46c-5.4-3.6-12.7,0.2-12.7,6.7V114\n    c0,6.5,7.3,10.4,12.7,6.7l68.4-46C112.8,71.5,112.8,64.5,108,61.3z"
+	    }
+	  })])]), _vm._v(" "), _c('span', {
 	    staticClass: "title"
 	  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('span', {
 	    staticClass: "next-month",
@@ -17950,7 +17977,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.goNext($event)
 	      }
 	    }
-	  }, [_vm._v(_vm._s(_vm.rightArrow))])]), _vm._v(" "), _c('div', {
+	  }, [_c('svg', {
+	    staticClass: "triangle icon",
+	    attrs: {
+	      "id": "rightArrow",
+	      "xmlns": "http://www.w3.org/2000/svg",
+	      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+	      "x": "0px",
+	      "y": "0px",
+	      "viewBox": "0 0 128 128",
+	      "enable-background": "new 0 0 128 128",
+	      "xml:space": "preserve"
+	    }
+	  }, [_c('path', {
+	    staticClass: "cls-1",
+	    attrs: {
+	      "fill-rule": "evenodd",
+	      "clip-rule": "evenodd",
+	      "d": "M108,61.3l-68.4-46c-5.4-3.6-12.7,0.2-12.7,6.7V114\n    c0,6.5,7.3,10.4,12.7,6.7l68.4-46C112.8,71.5,112.8,64.5,108,61.3z"
+	    }
+	  })])])]), _vm._v(" "), _c('div', {
 	    staticClass: "header-right"
 	  }, [_vm._t("header-right")], 2)])
 	},staticRenderFns: []}
