@@ -708,7 +708,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var events = day.events.filter(function (item) {
 	        return item.isShow == true;
 	      });
-	      this.$emit('moreClick', day.date, events, jsEvent);
+	      this.$emit('moreClick', day.date, events, jsEvent, day.isClosed);
 	    },
 	    computePos: function computePos(target) {
 	      var eventRect = target.getBoundingClientRect();

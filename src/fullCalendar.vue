@@ -245,7 +245,7 @@
         let events = day.events.filter(item =>{
           return item.isShow == true
         });
-        this.$emit('moreClick', day.date, events, jsEvent)
+        this.$emit('moreClick', day.date, events, jsEvent, day.isClosed)
       },
       computePos (target) {
         let eventRect = target.getBoundingClientRect();

@@ -92,8 +92,8 @@ export default {
     'dayClick' (day, jsEvent) {
       console.log('dayClick', day, jsEvent)
     },
-    'moreClick' (day, events, jsEvent) {
-      console.log('moreCLick', day, events, jsEvent)
+    'moreClick' (day, events, jsEvent, dayClosed) {
+      console.log('moreCLick', day, events, jsEvent, dayClosed)
     }
   },
   components : {
