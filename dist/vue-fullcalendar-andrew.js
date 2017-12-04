@@ -683,20 +683,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	          thisDayEvents[i].isExtra = true;
 	        }
 	
-	        if (thisDayEvents[i].cellIndex == i + 1 || i > 2) return 'continue';
-	        thisDayEvents.splice(i, 0, {
-	          title: 'holder',
-	          cellIndex: i + 1,
-	          start: date.format(),
-	          end: date.format(),
-	          isShow: false
-	        });
+	        // if (thisDayEvents[i].cellIndex == i+1 || i>2) continue;
+	        // thisDayEvents.splice(i,0,{
+	        //   title : 'holder',
+	        //   cellIndex : i+1,
+	        //   start : date.format(),
+	        //   end : date.format(),
+	        //   isShow : false
+	        // })
 	      };
 	
 	      for (var i = 0; i < thisDayEvents.length; i++) {
-	        var _ret = _loop(i);
-	
-	        if (_ret === 'continue') continue;
+	        _loop(i);
 	      }
 	      return thisDayEvents;
 	    },
